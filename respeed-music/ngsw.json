@@ -1,0 +1,95 @@
+{
+  "configVersion": 1,
+  "timestamp": 1778420931752,
+  "index": "/respeed-music/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/respeed-music/assets/soundtouch-processor.js",
+        "/respeed-music/favicon.ico",
+        "/respeed-music/favicon.svg",
+        "/respeed-music/index.html",
+        "/respeed-music/main-DZBLOC2S.js",
+        "/respeed-music/manifest.webmanifest",
+        "/respeed-music/styles-GW5N2EA2.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "icons",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/respeed-music/icons/icon-128x128.png",
+        "/respeed-music/icons/icon-144x144.png",
+        "/respeed-music/icons/icon-152x152.png",
+        "/respeed-music/icons/icon-167x167.png",
+        "/respeed-music/icons/icon-180x180.png",
+        "/respeed-music/icons/icon-192x192.png",
+        "/respeed-music/icons/icon-384x384.png",
+        "/respeed-music/icons/icon-512x512.png",
+        "/respeed-music/icons/icon-72x72.png",
+        "/respeed-music/icons/icon-96x96.png"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/respeed-music/assets/soundtouch-processor.js": "25e7671ffb8b1aab35ed700e2231770c4e65ca35",
+    "/respeed-music/favicon.ico": "62a7d9294b2b492ec77d825636bc324426f1bc29",
+    "/respeed-music/favicon.svg": "63ed5901534258c5108c8c06ca8efd1a1f85b25d",
+    "/respeed-music/icons/icon-128x128.png": "4beb7cde35fc42053acb7e103cc9250b89795d15",
+    "/respeed-music/icons/icon-144x144.png": "6e0cca1ddaccc8623bc00a3aec6f3eac74a6dd80",
+    "/respeed-music/icons/icon-152x152.png": "a492bc55a53c142c3bdeac6cf7417b0cfe8ac94b",
+    "/respeed-music/icons/icon-167x167.png": "586fc1316a1c4b38514cee9eaba7410afe66dd0b",
+    "/respeed-music/icons/icon-180x180.png": "2e06cf67a994799023762248b770e5180c224bfb",
+    "/respeed-music/icons/icon-192x192.png": "dbbfb1a654ded2e528bdd6800f1cbf0032d58ffb",
+    "/respeed-music/icons/icon-384x384.png": "f95d9016658b135082737338617521d7a5da75e3",
+    "/respeed-music/icons/icon-512x512.png": "10cb4923fb7b9518372de43dbf2224e5d03d6a5b",
+    "/respeed-music/icons/icon-72x72.png": "db1d1733c5869579497312ba07d2d0a79badec3b",
+    "/respeed-music/icons/icon-96x96.png": "23100831454150a20634522d6b3315351c892462",
+    "/respeed-music/index.html": "8edf39474de64b193fbc0475af77adaa091c0fcf",
+    "/respeed-music/main-DZBLOC2S.js": "080e7aca407d41818401798945b8f0187a89d26a",
+    "/respeed-music/manifest.webmanifest": "0d518261ae494f5886ed01fde431a96f148eab42",
+    "/respeed-music/styles-GW5N2EA2.css": "34fd5a30b6c42aeb709da9f16f49a977bffba0d6"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

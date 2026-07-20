@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>cExample JavaScript chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
+    <script src="charting.js"></script>
+  </head>
+  <body>
+    <h1>Example chart from loaded data</h1>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+    <script>
+      const chartContext = document.getElementById('myChart');
+      fetchData(chartContext);
+    </script>
+  </body>
+</html>

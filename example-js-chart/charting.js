@@ -47,7 +47,7 @@ function applyDataToChart(canvas, data) {
 }
 
 function fetchData(canvas) {
-  fetch('https://csuhj.github.io/example-js-chart/data.csv')
+  fetch('./data.csv')
     .then(response => {
       var data = response.text().then(text => {
         applyDataToChart(canvas, text);

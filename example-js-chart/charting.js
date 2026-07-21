@@ -1,28 +1,30 @@
-function createChart(chartContext, title, xValues, yValues) {
-    var chart = new Chart(chartContext, {
-    type: "bar",
-    data: {
-        labels: xValues,
-        datasets: [{
-        backgroundColor: ["green"],
-        data: yValues
-        }]
-    },
-    options: {
-        maintainAspectRatio: false,
-        plugins: {
-        legend: {display: false},
-        title: {
-            display: true,
-            text: title,
-            font: {size: 16}
+var chart;
+
+function createChart(canvas, title, xValues, yValues) {
+    chart = new Chart(canvas, {
+      type: "bar",
+      data: {
+          labels: xValues,
+          datasets: [{
+          backgroundColor: ["green"],
+          data: yValues
+          }]
+      },
+      options: {
+          maintainAspectRatio: false,
+          plugins: {
+          legend: {display: false},
+          title: {
+              display: true,
+              text: title,
+              font: {size: 16}
+          }
         }
       }
-    }
     });
 }
 
-function applyDataToChart(chartContext, data) {
+function applyDataToChart(canvas, data) {
   const xValues = [];
   const yValues = [];
   var dataLines = data.split(/\r\n|\n/);
@@ -41,15 +43,31 @@ function applyDataToChart(chartContext, data) {
     yValues.push(cells[1]);
   };
 
-  createChart(chartContext, title, xValues, yValues);
+  createChart(canvas, title, xValues, yValues);
 }
 
-function fetchData(chartContext) {
+function fetchData(canvas) {
   fetch('https://csuhj.github.io/example-js-chart/data.csv')
     .then(response => {
       var data = response.text().then(text => {
-        applyDataToChart(chartContext, text);
+        applyDataToChart(canvas, text);
       });
     })
     .catch(error => console.error('Failed to fetch data:', error)); 
+}
+
+function clickHandler(chart, event, outputLabel) {
+    const points = chart.getElementsAtEventForMode(event, 'nearest', { intersect: true }, true);
+
+    if (points.length) {
+        const firstPoint = points[0];
+        const label = chart.data.labels[firstPoint.index];
+        const value = chart.data.datasets[firstPoint.datasetIndex].data[firstPoint.index];
+
+        outputLabel.textContent = label+' has a value of '+value;
+    }
+}
+
+function connectClickHandler(canvas, outputLabel) {
+    canvas.addEventListener('click', (event) => clickHandler(chart, event, outputLabel), false);
 }

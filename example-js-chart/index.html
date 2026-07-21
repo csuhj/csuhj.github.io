@@ -9,11 +9,14 @@
   <body>
     <h1>Example chart from loaded data</h1>
     <div style="width: 250px;height: 250px;">
-      <canvas id="myChart"></canvas>
+      <canvas id="chartCanvas"></canvas>
     </div>
+    <p id="valueLabel"></p>
     <script>
-      const chartContext = document.getElementById('myChart');
-      fetchData(chartContext);
+      const chartCanvas = document.getElementById('chartCanvas');
+      const valueLabel = document.getElementById('valueLabel');
+      fetchData(chartCanvas);
+      connectClickHandler(chartCanvas, valueLabel);
     </script>
   </body>
 </html>

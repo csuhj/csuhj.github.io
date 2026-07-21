@@ -17,12 +17,9 @@ function createChart(chartContext, title, xValues, yValues) {
             text: title,
             font: {size: 16}
         }
-        }
+      }
     }
     });
-
-    chart.canvas.parentNode.style.height = '250px';
-    chart.canvas.parentNode.style.width = '250px';
 }
 
 function applyDataToChart(chartContext, data) {
